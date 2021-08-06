@@ -1,55 +1,189 @@
+
 @font-face {
-  font-family: "akrobatbold";
-  src: url("../fonts/akrobat-bold-webfont.woff2") format("woff2"),
-    url("../fonts/akrobat-bold-webfont.woff") format("woff");
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.woff2') format('woff2'),
+      url('../fonts/Helvetica.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "akrobatlight";
-  src: url("../fonts/akrobat-light-webfont.woff2") format("woff2"),
-    url("../fonts/akrobat-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "akrobatregular";
-  src: url("../fonts/akrobat-regular-webfont.woff2") format("woff2"),
-    url("../fonts/akrobat-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "akrobatsemibold";
-  src: url("../fonts/akrobat-semibold-webfont.woff2") format("woff2"),
-    url("../fonts/akrobat-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Chaparral Pro";
-  src: url("../fonts/ChaparralPro-Bold.woff2") format("woff2"),
-    url("../fonts/ChaparralPro-Bold.woff") format("woff");
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
+      url('../fonts/Helvetica-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Chaparral Pro";
-  src: url("../fonts/ChaparralPro-Regular.woff2") format("woff2"),
-    url("../fonts/ChaparralPro-Regular.woff") format("woff");
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Compressed.woff2') format('woff2'),
+      url('../fonts/Helvetica-Compressed.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('Helvetica-BoldOblique.woff2') format('woff2'),
+      url('Helvetica-BoldOblique.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('HelveticaRounded-Bold.woff2') format('woff2'),
+      url('HelveticaRounded-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Light.woff2') format('woff2'),
+      url('../fonts/Helvetica-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Oblique.woff2') format('woff2'),
+      url('../fonts/Helvetica-Oblique.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
+body{
+  background-color: azure;
+}
+.container{
+  max-width: 980px;
+  padding: 0 15px;
+  margin: 0 auto;
+ 
+}
+.topnav{
+  position: relative;
+  background-color: #3d4e5a;
+ 
+  
 
+}
+.topnav .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-topnav{
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+.left-topnav a{
+
+  text-decoration: none;
+  font-size: 12px;
+line-height: 16px;
+color: #ffffff;
+font-weight: bold;
+font-family: 'Helvetica';
+padding: 9px 6px;
+}
+.left-topnav a:first-child{
+  background-color: #ff7500;
+  font-size: 13px;
+}
+.first-letter{
+  position: relative;
+  text-transform:uppercase;
+  font-size: 10px;
+}
+.second-letter{
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.third-letter{
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.left-topnav a:last-child{
+  
+  font-size: 12px;
+  font-weight: 300;
+  border-left: 1px solid #fff;
+
+}
+.right-topnav{
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+ 
+  
+}
+.right-topnav a{
+  position: relative;
+  font-size: 12px;
+line-height: 12px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Titillium Web";
+text-align: center;
+text-decoration: none;
+border-left: 1px solid #fff;
+padding: 7px;
+}
+.right-topnav a span{
+  vertical-align: super;
+  margin: 0 5px;
+}
+.top-arrow{
+  position: absolute;
+  top: 99%;
+  left: 30%;
+  z-index: 2;
+  
+}
+.header{
+  position: relative;
+  background-color: #f4f4f4;
+}
+.header-top{
+  background-color: white;
+  padding: 12px 0px;
+  border-bottom: 1px solid #e6e5e5;
+
+}
+
+.main-header{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0px;
+}
+.logo{
+  flex-grow: 1;
+  cursor: pointer;
+}
