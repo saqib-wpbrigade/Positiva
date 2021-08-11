@@ -75,7 +75,7 @@ body{
   background-color:#ffff;
 }
 .container{
-  max-width: 980px;
+  max-width: 985px;
   padding: 0 15px;
   margin: 0 auto;
  
@@ -94,9 +94,7 @@ body{
 }
 .left-topnav{
   position: relative;
-  display: flex;
-  align-items: center;
-
+  
 }
 .left-topnav a{
 
@@ -106,11 +104,12 @@ line-height: 16px;
 color: #ffffff;
 font-weight: bold;
 font-family: 'Helvetica';
-padding: 9px 6px;
+padding: 9px 5px 9px 7px;
 }
 .left-topnav a:first-child{
   background-color: #ff7500;
   font-size: 13px;
+  padding-right: 10px;
 }
 .first-letter{
   position: relative;
@@ -151,7 +150,7 @@ font-family: "Titillium Web";
 text-align: center;
 text-decoration: none;
 border-left: 1px solid #fff;
-padding: 7px;
+padding: 6px 7px 4px 5px;
 }
 .right-topnav a span{
   vertical-align: super;
@@ -160,7 +159,7 @@ padding: 7px;
 .top-arrow{
   position: absolute;
   top: 99%;
-  left: 30%;
+  left: 35%;
   z-index: 2;
   
 }
@@ -181,7 +180,7 @@ padding: 7px;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 10px 0px;
+  padding: 13px 0px;
 }
 .logo{
   flex-grow: 1;
@@ -194,7 +193,7 @@ padding: 7px;
 .nav-menu{
   position: relative;
 }
-.nav-menu ul{
+.main-menu{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -205,24 +204,61 @@ padding: 7px;
 .list-item{
   position: relative;
   color: white;
-  padding: 12px;
+  padding: 16px 10px 16px 4px;
   font-size: 14px;
 letter-spacing: 0px;
 line-height: 22px;
 color: #ffffff;
 font-weight: bold;
 font-family: "Helvetica";
-text-align: center;
+
 filter: drop-shadow(0.07px -0.998px 0px rgba(197,80,66,0.75));
 cursor: pointer;
-}
-.nav-menu .list-item .sub-menu{
-  position: relative;
-  display: none;
 
 }
+
+
+
+.nav-menu .list-item:hover .sub-menu{
+display: block;
+transition: 0.3s all;
+position: absolute;
+top: 100%;
+background-color: #3d4e5a;
+width: 350px;
+padding: 10px;
+z-index:9999;
+
+
+
+}
+.nav-menu .list-item:hover .cards{
+  z-index: -1 !important;
+}
+.nav-menu .list-item:hover{
+  transition: 0.5s all;
+}
 .navbar .container{
-  padding: 0px 35px;
+  padding: 0px 36px;
+}
+.sub-menu{
+ 
+z-index: 9999;
+display: none
+ 
+}
+.sub-menu li a{
+ color: white;
+ text-decoration: none;
+ 
+}
+.sub-menu li a:hover{
+  color: #fd7605;
+  transition: 0.5s all;
+}
+.sub-menu li{
+  padding-top: 8px;
+  
 }
 .list-item img{
   color: white;
@@ -233,7 +269,7 @@ cursor: pointer;
 .form input{
   border:none;
   outline: none;
-  padding: 5px;
+  padding: 8px 15px 8px 12px;
   border-radius: 50px;
   vertical-align: super;
 }
@@ -248,22 +284,23 @@ cursor: pointer;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 500px;
+  min-height: 452px;
+  z-index: -1;
   
 }
 .hero-section .container{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 77px 47px 130px;
+  padding: 125px 98px 110px;
   justify-content: center;
   min-height: 100%;
 }
 
 .hero-section p{
   font-size: 23px;
-    letter-spacing: -1px;
-    line-height: 28px;
+    letter-spacing: -2px;
+    line-height: 27px;
     color: #fd7605;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -279,7 +316,8 @@ cursor: pointer;
 }
 .hero-section p .bold-text{
   position: relative;
-  font-size: 35px;
+  font-size: 34px;
+  letter-spacing: -2px;
   font-weight: 700;
   color: #ff7500;
 }
@@ -287,19 +325,23 @@ cursor: pointer;
   display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-top: -132px;
+    gap: 11px;
+    margin-top: -122px;
 
 }
+
 .cards{
   position: relative;
   background-color: #fd7605;
   text-align: center;
-  padding: 30px 0px 8px 0px;
-    min-width: 230px;
+  padding: 29px 0px 4px 0px;
+    min-width: 229px;
     
     margin: 0 auto;
     border-bottom: 5px solid #b95707;
+    overflow: hidden;
+    z-index: 1;
+  
 }
 .cards .card-content{
   position: relative;
@@ -307,18 +349,72 @@ cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   text-transform: uppercase;
-  margin-top: 5px;
-  
+  letter-spacing: 0px;
+  font-size: 14px;
 }
+.cards-wrapper .cards .card-hover{
+  position: absolute;
+  background: #3d4e5a;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-450%);
+  transition: 0.3s all;
+  z-index: 99;
 
+
+}
+.cards-wrapper .cards:hover .card-hover{
+  transform: translateX(0);
+  z-index: 1;
+
+}
+.cards-wrapper .card-hover img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cards-wrapper .card-hover .content-info{
+  z-index: 2;
+  color: #ffff;
+  text-align: center;
+}
+.cards-wrapper .cards .contact-info p{
+
+  font-family: 'Helvetica';
+  font-size: 20px;
+  color: rgb(244, 244, 244);
+  line-height: 0.879;
+  text-transform: capitalize;
+  margin-top: 10px;
+  display: block;
+}
+.cards-wrapper .card-hover .content-info a{
+  padding: 7px 12px;
+  font-size: 12px;
+  font-family: "Helvetica", sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 0.43;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 117, 0);
+  transition: 0.3s all;
+  text-decoration: none;
+  display: block;
+  margin-top: 15px;
+}
 .cards-text{
-  font-size: 18px;
-letter-spacing: -1px;
-line-height: 23px;
+  font-size: 17px;
+letter-spacing: 1px;
+
 color: #ffffff;
 font-weight: 400;
 font-family: "Titillium Web";
-text-align: center;
+
 text-transform: uppercase;
 
 }
@@ -326,13 +422,13 @@ text-transform: uppercase;
   position: relative;
   display: flex;
   
-  justify-content: center;
-  margin-top: 30px;
+  
+  margin-top: 16px;
  
 }
 .left-body{
   position: relative;
-  max-width: 75%;
+  max-width: 73%;
 }
 .asidebar-content{
   position: relative;
@@ -344,11 +440,14 @@ text-transform: uppercase;
   
   justify-content: space-between;
   max-width: 100%;
+  gap: 8px;
  
 }
 .tramites .info-box{
+  display: grid;
  background-color: #ffff;
- padding: 0px 33px;
+ padding-left: 0px;
+ padding-right: 22px;
  text-align: center;
     min-width: 236px;
     border-right: 1px solid transparent;
@@ -364,6 +463,10 @@ text-transform: uppercase;
   border-radius: 90px;
   margin-top: 15px;
  
+}
+.tramites .info-box .info-title{
+  position: relative;
+  height: 28px;
 }
 .info-box .card-image{
   position: relative;
@@ -555,6 +658,15 @@ text-decoration: none;
   padding: 10px 40px;
   text-transform: uppercase;
   margin-top: 45px;
+}
+.slider-content button:hover{
+  background-color:white;
+  border: 1px solid #ff7500;
+  
+  transition: 0.3s all;
+}
+.slider-content a:hover{
+  color: #fd7605;
 }
 .slider-content a{
   text-decoration: none;
