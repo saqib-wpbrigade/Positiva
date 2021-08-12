@@ -284,7 +284,7 @@ display: none
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 452px;
+  max-height: 452px;
   z-index: -1;
   
 }
@@ -421,24 +421,25 @@ text-transform: uppercase;
 .body-content{
   position: relative;
   display: flex;
-  
-  
-  margin-top: 16px;
+  justify-content: space-between;
  
 }
 .left-body{
   position: relative;
   max-width: 73%;
+  margin-top: 16px;
 }
 .asidebar-content{
   position: relative;
-  max-width: 25%;
+  max-width: 27%;
+  margin-top: 8px;
 }
 .tramites{
   position: relative;
-  display: flex;
   
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
   max-width: 100%;
   gap: 8px;
  
@@ -463,6 +464,12 @@ text-transform: uppercase;
   border-radius: 90px;
   margin-top: 15px;
  
+}
+.box-title{
+  position: relative;
+}
+.box-title img{
+  position: absolute;
 }
 .tramites .info-box .info-title{
   position: relative;
@@ -492,6 +499,10 @@ font-weight: 500;
 text-align: center;
 margin-top: 15px;
 }
+.info-box .card-content{
+  position: relative;
+  padding: 0px 27px;
+}
 .info-box .card-content a{
   color: #fd7605;
   font-family:'helvetica';
@@ -508,7 +519,7 @@ margin-top: 15px;
   position: absolute;
   content: url(../img/logo_icon.svg);
   
-  right: 30px;
+  right: 45px;
   z-index: 2;
 }
 .aside{
@@ -518,14 +529,14 @@ margin-top: 15px;
     background-color: #ffffff;
 }
 .aside .sidebar-body{
-  padding: 5px 20px;
+  padding: 3px 20px;
 }
 .aside button:first-child{
   text-decoration: none;
     
     
     background-color: #ff7500;
-    padding: 8px;
+    padding: 8px 8px 8px 14px;
     border: none;
     
 }
@@ -557,19 +568,19 @@ margin-top: 15px;
   color: #454545;
 }
 .aside  h2{
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'Helvetica';
   line-height: 17px;
-  letter-spacing: 0px;
-  font-weight: bold;
+  letter-spacing: 1px;
+word-spacing: 2px;
   color: white;
   background-color: #646464;
   text-align: center;
-  padding: 6px;
+  padding: 1px;
 }
 .forms-sidebar label{
   font-size: 14px;
-line-height: 31px;
+line-height: 30px;
 color: #686868;
 font-weight: 300;
 font-family: 'Helvetica';
@@ -577,7 +588,8 @@ font-family: 'Helvetica';
 .forms-sidebar select{
   border:1px solid #b4b3b3;
   outline: none;
-  padding:6px 43px;
+  padding: 4px 0px;
+  width: 100%;
   appearance: none;
   background:url(../img/arrow.svg);
   background-position: center right;
@@ -599,12 +611,15 @@ font-family: 'Helvetica';
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  padding: 8px 70px;
-  margin-top: 10px;
+  padding: 6px 0px;
+  width: 100%;
+  margin-top: 5px;
 }
 .buskar-btn a{
   text-decoration: none;
   color: #ffff;
+  font-size: 15px;
+  letter-spacing: -1px;
 }
 .forms-sidebar label{
   position: relative;
@@ -613,35 +628,44 @@ font-family: 'Helvetica';
   position: relative;
   margin-top: 15px;
 }
+.slick-dots li button{
+  padding: 3px 0px;
+  width:20px;
+}
 .slider .slick-dotted.slick-slider {
   margin-bottom: 5px;
 }
 .slider-ads .slick-dotted.slick-slider {
   margin-bottom: 5px;
 }
+.second-wrapper .left-body{
+  position: relative;
+  max-width: 73%;
+  margin-top: 3px;
+}
 .slider{
   position: relative;
-  width: 50%;
+  width: 48%;
 }
 .slider-content{
   position: relative;
   width: 50%;
-  padding: 25px 20px 10px 20px;
+  padding: 17px 12px 10px 24px;
 }
 .slider-area{
   position: relative;
   display: flex;
-  align-items: center;
+  
   
 }
 .slider-content h1{
   font-size: 36px;
-line-height: 66px;
+line-height: 72px;
 color: #fd7605;
 font-weight: 600;
 font-family: "Titillium Web";
 text-decoration: none;
-text-transform: uppercase;
+
 }
 .slider-content h2{
   position: relative;
@@ -652,12 +676,14 @@ font-weight: bold;
 font-family:'Helvetica';
 text-transform: uppercase;
 text-decoration: none;
+margin-bottom: 10px;
 }
 .slider-content button{
   background-color: #ff7500;
-  padding: 10px 40px;
+  
   text-transform: uppercase;
-  margin-top: 45px;
+  margin-top: 73px;
+    margin-left: 43px;
 }
 .slider-content button:hover{
   background-color:white;
@@ -671,16 +697,18 @@ text-decoration: none;
 .slider-content a{
   text-decoration: none;
   color: #ffffff;
-  padding: 7px;
+  font-size: 16px;
+    padding: 7px 29px;
+    display: block;
 }
 .slider-content p{
-  font-size: 14px;
-line-height: 18px;
-color: #454545;
+  font-size: 13px;
+line-height: 14px;
+color: #5f5f5f;
 font-family:'Helvetica';
 font-weight: 600;
 text-align: left;
-margin-top: 20px;
+margin-top: 18px;
 }
 
 .second-wrapper{
@@ -702,6 +730,9 @@ margin-top: 20px;
   min-height: 150px;
   margin-top: 5px;
 }
+.second-wrapper .asidebar-content{
+  margin-top: 4px;
+}
 
 .slider-ads{
   position: relative;
@@ -720,37 +751,40 @@ margin-top: 20px;
 }
 .newsletter{
   position: relative;
-  padding: 16px 20px;
+  padding: 0px 20px 10px;
     background-color: white;
     border: 1px solid #f2f2f2;
-    margin-top: 5px;
+   
 }
 .newsletter h1{
   text-decoration: none;
-    text-transform: uppercase;
+    
     font-size: 24px;
-    line-height: 46px;
+    line-height: 43px;
     color: #ff7500;
     font-weight: 700;
     font-family: "Titillium Web";
-    text-align: center;
+    
 }
 .form-news input{
   position: relative;
-  padding: 8px;
+  padding: 6px 35px 6px 9px;
+  max-width: 100%;
     border: 1px solid #f2f2f2;
     outline: none;
 }
 .form-news button{
-  padding: 10px 71px;
+  padding: 6px 78px;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #ff7500;
-  margin-top: 10px;
+  margin-top: 7px;
+  max-width: 100%;
 }
 .form-news a{
   text-decoration: none;
     color: white;
+    font-size: 15px;
 }
 .asidebar-content .aside-banner img{
   width: -webkit-fill-available;
@@ -761,11 +795,12 @@ margin-top: 20px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 340px;
-  margin-top: 5px;
+  min-height: 344px;
+  margin-top: 7px;
 }
 .aside input{
-  padding: 5px 25px;
+  padding: 5px 35px;
+  max-width: 100%;
   outline: none;
   border: 1px solid #f2f2f2;
  
@@ -793,8 +828,8 @@ input[type="date"]:before {
 }
 .slider-arrows{
   position: absolute;
-    width: 95%;
-    top: 45%;
+    width: 92%;
+    top: 38%;
     z-index: 2;
     cursor: pointer;
 }
@@ -892,7 +927,7 @@ row-gap: 4px;
     color: #ffffff;
     font-weight: bold;
     font-family: 'Helvetica';
-    
+    cursor:text;
 }
 #info-p{
   position: relative;
@@ -991,4 +1026,115 @@ font-family: "Helvetica Neue";
 }
 .footer-logo{
   z-index: 3;
+}
+@media (max-width:980px){
+  .main-body .cards-wrapper{
+    flex-wrap: wrap;
+  }
+  .tramites{
+    grid-template-columns: 1fr 1fr;
+  }
+  .sponscer{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:767px){
+  .main-body .cards-wrapper{
+   
+    margin-top: 10px;
+    justify-content: space-evenly;
+
+  }
+  .cards{
+    margin: 0px;
+  }
+  .asidebar-content{
+    max-width: 100%;
+  }
+  .body-content{
+    flex-direction: column;
+  }
+  .tramites{
+    grid-template-columns: 1fr;
+  }
+ .left-body{
+   max-width: 98%;
+ }
+  .main-menu{
+    display: none;
+  }
+  .second-wrapper .container{
+    flex-direction: column;
+  }
+  .third-wrapper .container{
+    flex-direction: column;
+  }
+  .topnav{
+    padding: 5px 0px;
+  }
+  .header-top{
+    display: none;
+  }
+  .second-wrapper .left-body{
+    max-width: 100%;
+  }
+  .form-news input {
+    position: relative;
+    padding: 13px 25px 13px 20px;}
+    .form-news button {
+      padding: 13px 78px;}
+      .slider-area{
+        flex-direction: column;
+      }
+      .slider{
+        width: 98%;
+      }
+.slider-content{
+  width: 100%;
+  padding: 10px 10px;
+}
+.slider-content h1{
+  font-size: 28px;
+  line-height: 50px;
+}
+.slider-content h2{
+  font-size: 13px;
+}
+.slider-content p {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.slider-content button {
+  margin-top: 15px;
+  margin-left: 0px;
+}
+.slider-content a {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+.sponscer {
+  flex-wrap: wrap;}
+  .left-section {
+    position: relative;
+    max-width: 100%;
+    margin: 10px;}
+    .footer .container{
+      flex-wrap: wrap;
+    }
+.slider-arrows{
+  display: none;
+}
+.main-header{
+  flex-wrap: wrap;
+}
+.right-topnav{
+  display: none;
+}
+.tramites .info-box{
+  max-width: 305px;
+  margin: 0 auto;
+  border: none;
+}
+
 }
